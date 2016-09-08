@@ -1395,7 +1395,7 @@ endif()
 if (CRYSTAX_NDK)
   message(STATUS "we use crystax ndk")
   set(ANDROID_LINKER_FLAGS "-L${ANDROID_NDK}/sources/crystax/libs/${ANDROID_NDK_ABI_NAME} ${ANDROID_LINKER_FLAGS} ${ANDROID_NDK}/sources/crystax/libs/${ANDROID_NDK_ABI_NAME}/libcrystax.a")
-  
+  include_directories("${ANDROID_NDK}/sources/boost/1.59.0/include")
 endif ()
 
 # cache flags
